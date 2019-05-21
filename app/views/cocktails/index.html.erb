@@ -1,0 +1,21 @@
+<div class="container pad20">
+  <!-- Heading -->
+  <h1 class="text-underline text-brand">Delicious cocktails</h1>
+
+    <!-- Grid row -->
+  <div class="row">
+    <!-- Card -->
+    <% @cocktails.each do |cocktail| %>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+                    url('https://www.pexels.com/photo/sliced-lime-fruit-near-clear-drinking-glass-with-lime-juice-on-brown-wooden-plank-1232152/');">
+          <div class="card-description">
+            <h2> <%= cocktail.name  %> </h2>
+          </div>
+          <%= link_to "Details", cocktail_path(cocktail), class: "card-link" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
