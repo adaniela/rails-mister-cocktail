@@ -8,9 +8,8 @@
     <% @cocktails.each do |cocktail| %>
 
       <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-                    url('https://www.pexels.com/photo/sliced-lime-fruit-near-clear-drinking-glass-with-lime-juice-on-brown-wooden-plank-1232152/');">
           <div class="card-description">
+            <%= image_tag "beverage-mojito.jpg", alt: "beverage", width: 200 %>
             <h2> <%= cocktail.name  %> </h2>
           </div>
           <%= link_to "Details", cocktail_path(cocktail), class: "card-link" %>
